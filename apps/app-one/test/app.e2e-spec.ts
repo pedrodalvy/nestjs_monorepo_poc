@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppOneModule } from './../src/app-one.module';
+import { AppOneModule } from '../src/app-one.module';
 
 describe('AppOneController (e2e)', () => {
   let app: INestApplication;
@@ -19,6 +19,6 @@ describe('AppOneController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect('App One works!');
   });
 });
